@@ -7,7 +7,7 @@ export class Home extends Component {
     return (
       <div>
             <h1>Hello, world!</h1>
-            <h2>This is my first Web Application made using ASP.NET and React.</h2>
+            <h3>This is my first Web Application made using ASP.NET and React.</h3>
             <p>It is a reminders application that offers the following features:
                 <ul>
                             <li>Create a reminder</li>
