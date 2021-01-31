@@ -6,6 +6,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.DependencyInjection;
+using RemindersApp.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace RemindersApp
 {
@@ -29,6 +32,14 @@ namespace RemindersApp
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Reminders Api", Version = "V1" });
             });
+
+            //Register db context for dependency injection
+            services.AddDbContext<RemindersContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("RemindersDatabase")));
+
+            //For db related error debugging
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
