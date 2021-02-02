@@ -12,7 +12,7 @@ namespace RemindersApp.Models
         public string name { get; set; }
         public DateTime reminderDatetime { get; set; }
         public DateTime createdOn { get; set; }
-        public DateTime deletedOn { get; set; }
+        public DateTime? deletedOn { get; set; }
 
     }
 }

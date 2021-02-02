@@ -34,8 +34,7 @@ namespace RemindersApp
             });
 
             //Register db context for dependency injection
-            services.AddDbContext<RemindersContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("RemindersDatabase")));
+            services.AddDbContext<RemindersContext>(); 
 
             //For db related error debugging
             services.AddDatabaseDeveloperPageExceptionFilter();

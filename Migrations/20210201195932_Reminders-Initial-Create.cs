@@ -16,7 +16,8 @@ namespace RemindersApp.Migrations
                     name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     reminderDatetime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     createdOn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    deletedOn = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    deletedOn = table.Column<DateTime>(type: "datetime2", nullable: true)
+
                 },
                 constraints: table =>
                 {
