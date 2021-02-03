@@ -12,6 +12,7 @@ namespace RemindersApp.Data
 
         }
 
+        //Removed OnConfiguring override since its now done in startup serviceConfiguration. 
         /* protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["RemindersDatabase"].ConnectionString);
