@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
+#nullable disable
 
 namespace RemindersApp.Models
 {
-    //Model Class for reminders
-    public class Reminder
+    public partial class Reminder
     {
         public int id { get; set; }
-        public string name { get; set; }
-        public DateTime reminderDatetime { get; set; }
-        public DateTime createdOn { get; set; }
-        public DateTime? deletedOn { get; set; }
-
+        public string Name { get; set; }
+        public DateTime ReminderDatetime { get; set; }
+        public DateTime CreatedOn { get; set; }
+        public DateTime? DeletedOn { get; set; }
     }
 }
