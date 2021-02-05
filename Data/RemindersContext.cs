@@ -4,6 +4,7 @@ using System.Configuration;
 
 namespace RemindersApp.Data
 {
+    //Data Access Layer for reminders table
     public class RemindersContext : DbContext // This is the main class that allows for functionality with EF Core
     {
 
