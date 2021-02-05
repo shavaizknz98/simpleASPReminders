@@ -52,6 +52,9 @@ namespace RemindersApp.Controllers
                 return BadRequest();
             }
 
+            DateTime now = DateTime.Now;
+            reminder.CreatedOn = now;
+            _context.Reminders.Add(reminder);
             _context.Entry(reminder).State = EntityState.Modified;
 
             try
@@ -78,6 +81,8 @@ namespace RemindersApp.Controllers
         [HttpPost]
         public async Task<ActionResult<Reminder>> PostReminder(Reminder reminder)
         {
+            DateTime now = DateTime.Now;
+            reminder.CreatedOn = now;
             _context.Reminders.Add(reminder);
             await _context.SaveChangesAsync();
 
